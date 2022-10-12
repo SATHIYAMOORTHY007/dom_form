@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //in DOM
+//Assignemt 01: Create a HTML Form Using DOM
+//1.firstname,2.Middlename,3.lastname,4.Phone number
+//Deploy it in Netlify
+//functions: it helps to remove the repeatative code
+var firstname=createlabels("label","for","Firstname","Firstname");
+var br1=createlinebreak("br");
+var first_input=createinput("input","type","first","id","Firstname");
+var br2=createlinebreak("br");
+
+var middlename=createlabels("label","for","Middlename","Middlename");
+var br3=createlinebreak("br");
+var middle_input=createinput("input","type","Middlename","id","Middlename");
+var br4=createlinebreak("br");
+
+var ph_name=createlabels("label","for","Phone","phone");
+var br5=createlinebreak("br");
+var ph_input=createinput("input","type","phone","id","phone");
+var br6=createlinebreak("br");
+
+
+document.body.append(firstname,br1,first_input,br2,middlename,br3,middle_input,br4,ph_name,br5,ph_input,br6);
+
+
+function createlabels(tagname,attrname,attrvalue,content){
+var ele=document.createElement(tagname);
+ele.setAttribute(attrname,attrvalue);
+ele.innerHTML=content;
+return ele;
+}
+//it is returning an HTML element
+//<label for="email">Mail</label>
+
+function createinput(tagname,attrname,attrvalue,attrname1,attrvalue1){
+    var ele=document.createElement(tagname);
+    ele.setAttribute(attrname,attrvalue);
+    ele.setAttribute(attrname1,attrvalue1);
+    return ele;
+}
+function createlinebreak(tagname){
+var ele=document.createElement(tagname);
+return ele;
+}
+    </script>
+</body>
+</html>
